@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="speciality_dropdown">
+        <item>Plastic Surgery</item>
+        <item>Orthopaedic Surgeon</item>
+        <item>Cardiologist</item>
+        <item>Radiologist</item>
+        <item>Physician</item>
+        <item>Pediatrician</item>
+        <item>Gynaecologist</item>
+        <item>Ophthalmologist</item>
+        <item>Dentist</item>
+        <item>Surgeon</item>
+        <item>Psychiatrist</item>
+        <item>Anaesthetist</item>
+        <item>Physiotherapist</item>
+        <item>Neurologist</item>
+        <item>Nephrologist</item>
+        <item>Other</item>
+    </string-array>
+</resources>

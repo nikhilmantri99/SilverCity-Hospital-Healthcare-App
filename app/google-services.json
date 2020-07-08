@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "580016622369",
+    "firebase_url": "https://silvercity-41fcf.firebaseio.com",
+    "project_id": "silvercity-41fcf",
+    "storage_bucket": "silvercity-41fcf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:580016622369:android:134e3f02add3ebcc7ecc60",
+        "android_client_info": {
+          "package_name": "com.example.SilverCity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "580016622369-p421gl69mgcdq14p4gorg81912gjnqsv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeeURPW1zhOLKSDYElrcmJHzobwuv28SM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "580016622369-p421gl69mgcdq14p4gorg81912gjnqsv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
