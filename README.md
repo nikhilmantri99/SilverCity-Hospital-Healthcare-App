@@ -1,0 +1,2 @@
+# SilverCity-Hospital-Healthcare-App
+We have made an app for a hospital named SilverCity to enable people to take appointments with the doctors of the hospital in an organized manner. The app also enables doctors to give diagnosis results, prescriptions, hospitalisation summary online in the app that gets tored in our firebase storage, thus cutting the need to carry files of the patient everywhere he/she goes. Apart from that we have included other sections which streamline this process of consulting a doctor, for example showing google map locations of the doctor.
