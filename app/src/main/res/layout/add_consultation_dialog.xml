@@ -64,8 +64,16 @@
         android:textSize="16sp"
         android:layout_marginBottom="15dp"/>
 
+    <Button
+        android:id="@+id/prescription_upload_button"
+        android:layout_width="135dp"
+        android:layout_height="77dp"
+        android:layout_marginLeft="120dp"
+        android:text="Take prescription photo" />
+
     <EditText
         android:id="@+id/prescription"
+        android:layout_marginTop="12dp"
         android:layout_width="262dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -75,7 +83,7 @@
         android:lines="8"
         android:minLines="3"
         android:maxLines="6"
-        android:hint="Prescription..."
+        android:hint="Either take a photo of prescription above or type here."
         android:gravity="top"
         android:inputType="textMultiLine"
         android:scrollbars="vertical"

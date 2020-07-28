@@ -52,7 +52,7 @@ public class AddHospitalisationDialog extends AppCompatDialogFragment {
                     Toast.makeText(getActivity(), "A field is empty", Toast.LENGTH_SHORT).show();
                 } else {
                     Hospitalisation hospitalisation = new Hospitalisation(hospitalName.getText().toString(), patientEmail, date.getText().toString(),
-                     disease.getText().toString(), price.getText().toString()+" DH");
+                     disease.getText().toString(), price.getText().toString()+" Rs");
                     DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Hospitalisations");
                     ref.push().setValue(hospitalisation).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override

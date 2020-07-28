@@ -36,7 +36,7 @@ public class DoctorEditProfileInfo extends AppCompatActivity {
     private static final int Pick_Image_Request = 1;
     RevealAnimation mRevealAnimation;
     CircleImageView circleImageView;
-    private Uri mImageUri;
+    private Uri mImageUri=null;
     EditText fullName, speciality, email, phoneNumber, address, city;
     String receivedFullName, receivedSpeciality, receivedEmail, receivedPhoneNumber, receivedAddress, receivedCity, receivedCode;
     String receivedImageUri;
@@ -125,8 +125,6 @@ public class DoctorEditProfileInfo extends AppCompatActivity {
                 Toast.makeText(DoctorEditProfileInfo.this, "Image uploaded successfully", Toast.LENGTH_SHORT).show();
             }
         });
-
-
     }
 
     public void update(View view) {
