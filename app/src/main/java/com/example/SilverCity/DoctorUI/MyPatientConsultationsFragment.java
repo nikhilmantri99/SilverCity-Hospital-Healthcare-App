@@ -98,6 +98,7 @@ public class MyPatientConsultationsFragment extends Fragment {
                 intent.putExtra("price", consultation.getPrice());
                 intent.putExtra("prescription", consultation.getPrescription());
                 intent.putExtra("disease", consultation.getDisease());
+                intent.putExtra("patientEmail",consultation.getPatientEmail());
                 startActivity(intent);
             }
         });

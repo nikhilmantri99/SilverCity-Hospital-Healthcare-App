@@ -112,16 +112,17 @@ public class AddConsultationDialog extends AppCompatDialogFragment {
 //                    }
 //                    else{
                         //Log.d("debug4","not null Uri");
-                        mStorageReference = FirebaseStorage.getInstance().getReference("Prescription_uploads");
-                        StorageReference ref1 = mStorageReference.child(doctorEmail+"."+patientEmail+date.getText().toString().replaceAll("/","_")+price.getText().toString().replaceAll(" ","_")+".png");
-                        ref1.putBytes(data1).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                            @Override
-                            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                                Log.d("debug4","just uploaded");
-                                //Toast.makeText(getContext(), "Image uploaded successfully", Toast.LENGTH_SHORT).show();
-                            }
-                        });
-
+                        if(data1!=null){
+                            mStorageReference = FirebaseStorage.getInstance().getReference("Prescription_uploads");
+                            StorageReference ref1 = mStorageReference.child(doctorEmail+"."+patientEmail+date.getText().toString().replaceAll("/","_")+price.getText().toString().replaceAll(" ","_")+".png");
+                            ref1.putBytes(data1).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                                @Override
+                                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                                    Log.d("debug4","just uploaded");
+                                    //Toast.makeText(getContext(), "Image uploaded successfully", Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                        }
 
                     Consultation consultation = new Consultation(doctorName, doctorEmail, patientEmail, disease.getText().toString(), date.getText().toString(),
                             price.getText().toString()+" Rs", prescription.getText().toString());
@@ -189,6 +190,9 @@ public class AddConsultationDialog extends AppCompatDialogFragment {
 //                Log.d("mImageUri","not null");
 //            }
 //            Log.d("debug1","mImageUriassigned");
+        }
+        else{
+            data1=null;
         }
     }
 }

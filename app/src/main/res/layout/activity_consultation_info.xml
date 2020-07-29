@@ -7,19 +7,21 @@
     tools:context=".ConsultationInfoActivity">
 
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
-            android:layout_height="262dp"
-            android:background="@drawable/consultationbackground" />
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="282dp"
+        android:background="@drawable/consultationbackground" />
+
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profile_image"
         android:layout_width="124dp"
-        android:layout_height="124dp"
+        android:layout_height="97dp"
         android:layout_gravity="center"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="10dp"
         app:civ_border_color="#FFFFFF"
         app:civ_border_width="2dp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -121,9 +123,22 @@
             android:textAllCaps="false"
             android:textColor="#FFF"
             android:textSize="16sp" />
+<!--        <Button-->
+<!--            android:id="@+id/button_download_prescription"-->
+<!--            android:layout_width="177dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:background="@drawable/custombutton"-->
+<!--            android:fontFamily="@font/montserrat_bold"-->
+<!--            android:onClick="prescription"-->
+<!--            android:text="View prescription photo"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textColor="#FFF"-->
+<!--            android:textSize="16sp" />-->
 
 
     </LinearLayout>
+
 
 
 </FrameLayout>
