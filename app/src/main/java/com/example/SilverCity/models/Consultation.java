@@ -8,6 +8,7 @@ public class Consultation {
     String date;
     String price;
     String prescription;
+    String prescription_image_name=null;
 
     public Consultation() {
     }
@@ -20,6 +21,14 @@ public class Consultation {
         this.date = date;
         this.price = price;
         this.prescription = prescription;
+    }
+
+    public void set_prescription_image_name(String temp){
+        prescription_image_name=temp;
+    }
+
+    public String get_prescription_image_name(){
+        return prescription_image_name;
     }
 
     public String getDoctorName() {

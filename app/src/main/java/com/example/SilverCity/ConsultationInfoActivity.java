@@ -2,6 +2,7 @@ package com.example.SilverCity;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
@@ -55,7 +56,9 @@ public class ConsultationInfoActivity extends AppCompatActivity {
         String receivedPrice = intent.getStringExtra("price");
         String receivedDisease = intent.getStringExtra("disease");
         String patientemail=intent.getStringExtra("patientEmail");
+        String received_prescription_image_name=intent.getStringExtra("prescription_image_name");
         receivedPrescription = intent.getStringExtra("prescription");
+
 
         StorageReference storageReference = FirebaseStorage.getInstance().getReference();
         StorageReference profileRef = storageReference.child("Profile_pictures").child(receivedDoctorEmail + ".jpg");
@@ -66,7 +69,7 @@ public class ConsultationInfoActivity extends AppCompatActivity {
             }
         });
 
-        String temp=receivedDoctorEmail+"."+patientemail+receivedDate.replaceAll("/","_")+receivedPrice.replaceAll(" Rs","")+".png";
+        String temp=received_prescription_image_name;
         if(temp!=null){
             StorageReference storageReference1 = FirebaseStorage.getInstance().getReference();
             StorageReference prescriptionref = storageReference1.child("Prescription_uploads").child(temp);

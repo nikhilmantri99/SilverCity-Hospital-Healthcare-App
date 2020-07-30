@@ -66,10 +66,10 @@
 
     <Button
         android:id="@+id/prescription_upload_button"
-        android:layout_width="135dp"
+        android:layout_width="187dp"
         android:layout_height="77dp"
         android:layout_marginLeft="120dp"
-        android:text="Take prescription photo" />
+        android:text="Upload prescription photo from gallery." />
 
     <EditText
         android:id="@+id/prescription"
