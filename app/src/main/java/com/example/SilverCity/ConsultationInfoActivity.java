@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -36,6 +37,7 @@ public class ConsultationInfoActivity extends AppCompatActivity {
     TextView fullName, speciality, date, price, disease;
     ImageView imageView;
     String receivedPrescription;
+    String temp=null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +45,6 @@ public class ConsultationInfoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_consultation_info);
         profilePicture = findViewById(R.id.profile_image);
         imageView=findViewById(R.id.imageView3);
-
         fullName = findViewById(R.id.fullName);
         speciality = findViewById(R.id.speciality);
         date = findViewById(R.id.date);
@@ -69,7 +70,7 @@ public class ConsultationInfoActivity extends AppCompatActivity {
             }
         });
 
-        String temp=received_prescription_image_name;
+        temp=received_prescription_image_name;
         if(temp!=null){
             StorageReference storageReference1 = FirebaseStorage.getInstance().getReference();
             StorageReference prescriptionref = storageReference1.child("Prescription_uploads").child(temp);
@@ -128,5 +129,20 @@ public class ConsultationInfoActivity extends AppCompatActivity {
         button.setBackgroundColor(Color.parseColor("#33aeb6"));
     }
 
+    public void display_prescription_photo(View view){
+        if(temp==null){
+            SweetAlertDialog sweetAlertDialog = new SweetAlertDialog(this);
+            sweetAlertDialog.setTitleText("No Prescription photo");
+            sweetAlertDialog.setContentText("Sorry!");
+            sweetAlertDialog.show();
+            Button button = sweetAlertDialog.getButton(SweetAlertDialog.BUTTON_CONFIRM);
+            button.setBackgroundColor(Color.parseColor("#33aeb6"));
+        }
+        else{
+            Intent intent = new Intent(this, DisplayPrescriptionPhoto.class);
+            intent.putExtra("temp",temp);
+            startActivity(intent);
+        }
+    }
 
 }

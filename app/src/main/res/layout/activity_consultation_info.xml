@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
-        android:layout_height="282dp"
+        android:layout_height="238dp"
         android:background="@drawable/consultationbackground" />
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -18,7 +18,7 @@
         android:layout_width="124dp"
         android:layout_height="97dp"
         android:layout_gravity="center"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="25dp"
         app:civ_border_color="#FFFFFF"
         app:civ_border_width="2dp" />
 
@@ -114,31 +114,28 @@
         <Button
             android:id="@+id/button4"
             android:layout_width="177dp"
-            android:layout_height="wrap_content"
+            android:layout_height="34dp"
             android:layout_gravity="center"
             android:background="@drawable/custombutton"
             android:fontFamily="@font/montserrat_bold"
             android:onClick="prescription"
-            android:text="Prescription"
+            android:text="prescription"
             android:textAllCaps="false"
             android:textColor="#FFF"
             android:textSize="16sp" />
-<!--        <Button-->
-<!--            android:id="@+id/button_download_prescription"-->
-<!--            android:layout_width="177dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_gravity="center"-->
-<!--            android:background="@drawable/custombutton"-->
-<!--            android:fontFamily="@font/montserrat_bold"-->
-<!--            android:onClick="prescription"-->
-<!--            android:text="View prescription photo"-->
-<!--            android:textAllCaps="false"-->
-<!--            android:textColor="#FFF"-->
-<!--            android:textSize="16sp" />-->
 
-
+        <Button
+            android:id="@+id/button_download_prescription1"
+            android:layout_marginTop="5dp"
+            android:layout_width="177dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:background="@drawable/custombutton"
+            android:fontFamily="@font/montserrat_bold"
+            android:onClick="display_prescription_photo"
+            android:text="prescription photo"
+            android:textAllCaps="false"
+            android:textColor="#FFF"
+            android:textSize="16sp" />
     </LinearLayout>
-
-
-
 </FrameLayout>
