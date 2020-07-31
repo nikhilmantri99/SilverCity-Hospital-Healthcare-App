@@ -10,6 +10,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -185,6 +186,19 @@ public class MenuActivity extends AppCompatActivity {
     public void profileInfo(View view) {
         Intent intent = new Intent(MenuActivity.this, PatientProfileInformations.class);
         startActivity(intent);
+    }
+    public void Emergency(View view) {
+        Intent intent = new Intent(MenuActivity.this, EmergencyCall.class);
+        startActivity(intent);
+    }
+
+    public void Feedback(View view){
+        SweetAlertDialog sweetAlertDialog = new SweetAlertDialog(this);
+        sweetAlertDialog.setTitleText("Will be available soon");
+        sweetAlertDialog.setContentText("We are constantly developing,this feature will develop soon. Thank you!");
+        sweetAlertDialog.show();
+        Button button = sweetAlertDialog.getButton(SweetAlertDialog.BUTTON_CONFIRM);
+        button.setBackgroundColor(Color.parseColor("#33aeb6"));
     }
 
     public void openMedicalFolder(View view) {

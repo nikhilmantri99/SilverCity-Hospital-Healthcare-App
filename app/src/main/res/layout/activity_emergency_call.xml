@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".EmergencyCall">
+
+    <Button
+        android:id="@+id/callHospital"
+        android:layout_width="303dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/custombutton"
+        android:fontFamily="@font/montserrat"
+        android:padding="10dp"
+        android:layout_marginTop="400dp"
+        android:textColor="#ffffff"
+        android:text="Call Hospital"
+        android:textSize="24sp"/>
+
+    <Button
+        android:id="@+id/callAmbulance"
+        android:layout_width="303dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/callHospital"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/custombutton"
+        android:fontFamily="@font/montserrat"
+        android:padding="10dp"
+        android:text="Call Ambulance"
+        android:textColor="#ffffff"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="500dp"
+        android:layout_height="400dp"
+        app:srcCompat="@drawable/hospital" />
+
+</RelativeLayout>

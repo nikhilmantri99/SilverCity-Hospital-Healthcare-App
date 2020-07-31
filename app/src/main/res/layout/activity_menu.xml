@@ -61,7 +61,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="135dp"
+            android:layout_width="115dp"
             android:layout_height="125dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/customlinearlayout"
@@ -72,7 +72,7 @@
             <ImageView
                 android:layout_width="64dp"
                 android:layout_height="64dp"
-                android:src="@drawable/ic_today" />
+                app:srcCompat="@drawable/ic_today" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -83,9 +83,34 @@
                 android:textColor="@android:color/white"
                 android:textSize="16sp" />
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="125dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/customlinearlayout"
+            android:gravity="center"
+            android:onClick="Emergency"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                app:srcCompat="@drawable/emergency" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="EMERGENCY"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
 
         <LinearLayout
-            android:layout_width="135dp"
+            android:layout_width="115dp"
             android:layout_height="125dp"
             android:layout_marginLeft="10dp"
             android:background="@drawable/customlinearlayout"
@@ -96,7 +121,7 @@
             <ImageView
                 android:layout_width="64dp"
                 android:layout_height="64dp"
-                android:src="@drawable/ic_create_new_folder" />
+                app:srcCompat="@drawable/ic_create_new_folder" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -203,7 +228,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="135dp"
+            android:layout_width="115dp"
             android:layout_height="125dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/customlinearlayout"
@@ -226,9 +251,34 @@
                 android:textSize="16sp" />
 
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="125dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/customlinearlayout"
+            android:gravity="center"
+            android:onClick="Feedback"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/feedback" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="FEEDBACK"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
 
         <LinearLayout
-            android:layout_width="135dp"
+            android:layout_width="115dp"
             android:layout_height="125dp"
             android:layout_marginLeft="10dp"
             android:background="@drawable/customlinearlayout"
@@ -239,7 +289,7 @@
             <ImageView
                 android:layout_width="64dp"
                 android:layout_height="64dp"
-                android:src="@drawable/ic_exit_to_app" />
+                app:srcCompat="@drawable/ic_exit_to_app" />
 
             <TextView
                 android:layout_width="wrap_content"

@@ -49,6 +49,7 @@
             android:name="com.example.SilverCity.DoctorLocalisation"
             android:label="@string/title_activity_doctor_localisation" />
         <activity android:name="com.example.SilverCity.ConsultationInfoActivity" />
+        <activity android:name="com.example.SilverCity.EmergencyCall" />
         <activity
             android:name="com.example.SilverCity.MedicalFolderActivity"
             android:label="@string/title_activity_medical_folder"
