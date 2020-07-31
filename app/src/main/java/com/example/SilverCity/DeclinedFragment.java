@@ -80,7 +80,7 @@ public class DeclinedFragment extends Fragment {
                 alertDialog.setContentText(myReasons.get(position));
                 alertDialog.show();
                 Button btn = (Button) alertDialog.findViewById(R.id.confirm_button);
-                btn.setBackgroundColor(Color.parseColor("#33aeb6"));
+                btn.setBackgroundColor(Color.parseColor("#da0384"));
 
             }
         });

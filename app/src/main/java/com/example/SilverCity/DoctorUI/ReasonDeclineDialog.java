@@ -64,7 +64,7 @@ public class ReasonDeclineDialog extends AppCompatDialogFragment {
                                 alertDialog.setContentText("Reason added successfuly !");
                                 alertDialog.show();
                                 Button btn = alertDialog.findViewById(R.id.confirm_button);
-                                btn.setBackgroundColor(Color.parseColor("#33AEB6"));
+                                btn.setBackgroundColor(Color.parseColor("#da0384"));
                                 alertDialog.show();
                             }
                         }

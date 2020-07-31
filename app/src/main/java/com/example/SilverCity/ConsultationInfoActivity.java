@@ -126,7 +126,7 @@ public class ConsultationInfoActivity extends AppCompatActivity {
         sweetAlertDialog.setContentText(receivedPrescription);
         sweetAlertDialog.show();
         Button button = sweetAlertDialog.getButton(SweetAlertDialog.BUTTON_CONFIRM);
-        button.setBackgroundColor(Color.parseColor("#33aeb6"));
+        button.setBackgroundColor(Color.parseColor("#da0384"));
     }
 
     public void display_prescription_photo(View view){
@@ -136,7 +136,7 @@ public class ConsultationInfoActivity extends AppCompatActivity {
             sweetAlertDialog.setContentText("Sorry!");
             sweetAlertDialog.show();
             Button button = sweetAlertDialog.getButton(SweetAlertDialog.BUTTON_CONFIRM);
-            button.setBackgroundColor(Color.parseColor("#33aeb6"));
+            button.setBackgroundColor(Color.parseColor("#da0384"));
         }
         else{
             Intent intent = new Intent(this, DisplayPrescriptionPhoto.class);

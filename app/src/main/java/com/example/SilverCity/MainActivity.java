@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this, "Login or Password are empty", Toast.LENGTH_SHORT).show();
         } else {
             final SweetAlertDialog pDialog = new SweetAlertDialog(this, SweetAlertDialog.PROGRESS_TYPE);
-            pDialog.getProgressHelper().setBarColor(Color.parseColor("#33aeb6"));
+            pDialog.getProgressHelper().setBarColor(Color.parseColor("#da0384"));
             pDialog.setTitleText("Loading");
             pDialog.setCancelable(false);
             pDialog.show();

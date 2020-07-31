@@ -130,7 +130,7 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         android:src="@drawable/ic_plus_sign"
-        android:backgroundTint="#33aeb6"
+        android:backgroundTint="#da0384"
         android:onClick="addPatient"
         app:borderWidth="0dp"
 

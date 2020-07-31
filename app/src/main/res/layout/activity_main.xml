@@ -39,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:backgroundTint="#33aeb6"
+            android:backgroundTint="#da0384"
             android:drawableLeft="@drawable/ic_person_outline"
             android:ems="10"
             android:hint="Login..."
@@ -51,7 +51,7 @@
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#33aeb6"
+            android:backgroundTint="#da0384"
             android:drawableLeft="@drawable/ic_lock_outline"
             android:ems="10"
             android:hint="Password..."
@@ -65,8 +65,8 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:text="Remember me"
-            android:textColor="#33aeb6"
-            android:buttonTint="#33aeb6"
+            android:textColor="#da0384"
+            android:buttonTint="#da0384"
             />
 
     </LinearLayout>

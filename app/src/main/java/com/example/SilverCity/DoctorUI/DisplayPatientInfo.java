@@ -116,7 +116,7 @@ public class DisplayPatientInfo extends AppCompatActivity {
                         alertDialog.setContentText(receivedFullName+" is one of your patients !");
                         alertDialog.show();
                         Button btn = alertDialog.findViewById(R.id.confirm_button);
-                        btn.setBackgroundColor(Color.parseColor("#33aeb6"));
+                        btn.setBackgroundColor(Color.parseColor("#da0384"));
                     }
                 }
             }

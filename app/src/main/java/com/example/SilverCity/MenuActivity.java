@@ -90,7 +90,7 @@ public class MenuActivity extends AppCompatActivity {
                             .setContentTitle("Daily appointments")
                             .setContentText("You have one appointment today")
                             .setAutoCancel(true)
-                            .setColor(Color.parseColor("#33AEB6"))
+                            .setColor(Color.parseColor("#da0384"))
                             .setDefaults(Notification.DEFAULT_ALL)
                             .setPriority(NotificationCompat.PRIORITY_HIGH);
                 }
@@ -100,7 +100,7 @@ public class MenuActivity extends AppCompatActivity {
                             .setContentTitle("Daily appointments")
                             .setContentText("You have " + numbers[numberOfAppointments - 1] + " appointments today")
                             .setAutoCancel(true)
-                            .setColor(Color.parseColor("#33AEB6"))
+                            .setColor(Color.parseColor("#da0384"))
                             .setDefaults(Notification.DEFAULT_ALL)
                             .setPriority(NotificationCompat.PRIORITY_HIGH);
 
@@ -111,7 +111,7 @@ public class MenuActivity extends AppCompatActivity {
                             .setContentTitle("Daily appointments")
                             .setContentText("You have no appointments today")
                             .setAutoCancel(true)
-                            .setColor(Color.parseColor("#33AEB6"))
+                            .setColor(Color.parseColor("#da0384"))
                             .setDefaults(Notification.DEFAULT_ALL)
                             .setPriority(NotificationCompat.PRIORITY_HIGH);
 
@@ -198,7 +198,7 @@ public class MenuActivity extends AppCompatActivity {
         sweetAlertDialog.setContentText("We are constantly developing,this feature will develop soon. Thank you!");
         sweetAlertDialog.show();
         Button button = sweetAlertDialog.getButton(SweetAlertDialog.BUTTON_CONFIRM);
-        button.setBackgroundColor(Color.parseColor("#33aeb6"));
+        button.setBackgroundColor(Color.parseColor("#da0384"));
     }
 
     public void openMedicalFolder(View view) {

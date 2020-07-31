@@ -50,7 +50,7 @@ public class ResetPasswordDialog extends AppCompatDialogFragment {
                                         alertDialog.setContentText("Check your email box !");
                                         alertDialog.show();
                                         Button btn = alertDialog.findViewById(R.id.confirm_button);
-                                        btn.setBackgroundColor(Color.parseColor("#33AEB6"));
+                                        btn.setBackgroundColor(Color.parseColor("#da0384"));
                                         alertDialog.setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
                                             @Override
                                             public void onClick(SweetAlertDialog sweetAlertDialog) {

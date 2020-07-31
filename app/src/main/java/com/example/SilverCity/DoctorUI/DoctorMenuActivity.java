@@ -88,7 +88,7 @@ public class DoctorMenuActivity extends AppCompatActivity {
                             .setContentTitle("Daily appointments")
                             .setContentText("You have one appointment today")
                             .setAutoCancel(true)
-                            .setColor(Color.parseColor("#33AEB6"))
+                            .setColor(Color.parseColor("#da0384"))
                             .setDefaults(Notification.DEFAULT_ALL)
                             .setPriority(NotificationCompat.PRIORITY_HIGH);
                 }
@@ -98,7 +98,7 @@ public class DoctorMenuActivity extends AppCompatActivity {
                             .setContentTitle("Daily appointments")
                             .setContentText("You have " + numbers[numberOfAppointments - 1] + " appointments today")
                             .setAutoCancel(true)
-                            .setColor(Color.parseColor("#33AEB6"))
+                            .setColor(Color.parseColor("#da0384"))
                             .setDefaults(Notification.DEFAULT_ALL)
                             .setPriority(NotificationCompat.PRIORITY_HIGH);
 
@@ -109,7 +109,7 @@ public class DoctorMenuActivity extends AppCompatActivity {
                             .setContentTitle("Daily appointments")
                             .setContentText("You have no appointments today")
                             .setAutoCancel(true)
-                            .setColor(Color.parseColor("#33AEB6"))
+                            .setColor(Color.parseColor("#da0384"))
                             .setDefaults(Notification.DEFAULT_ALL)
                             .setPriority(NotificationCompat.PRIORITY_HIGH);
 
