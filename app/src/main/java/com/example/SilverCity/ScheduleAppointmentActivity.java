@@ -39,6 +39,7 @@ public class ScheduleAppointmentActivity extends AppCompatActivity implements Da
     List<Appointment> appointments;
     String emailPatient, emailDoctor;
     String timeOfAppointment;
+    int num_of_patients_at_same_time=3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,7 +97,7 @@ public class ScheduleAppointmentActivity extends AppCompatActivity implements Da
                         appointments.add(appointment);
                     }
                 }
-                if(appointments.size() == 14)
+                if(appointments.size() == 42)
                 {
                     new SweetAlertDialog(ScheduleAppointmentActivity.this)
                             .setTitleText("Scheduling an appointment!")
@@ -106,7 +107,8 @@ public class ScheduleAppointmentActivity extends AppCompatActivity implements Da
                 }
                 else
                 {
-                    double timeFull = (double)(appointments.size()*30)/60;
+                    int x=(int)appointments.size()/num_of_patients_at_same_time;
+                    double timeFull = (double)(x*30)/60;
                     int hour = 9 + (int)timeFull;
                     double minutes = timeFull - (int)timeFull;
                     System.out.println(minutes);
