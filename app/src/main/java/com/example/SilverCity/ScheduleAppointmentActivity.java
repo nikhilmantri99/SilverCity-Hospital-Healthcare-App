@@ -4,6 +4,7 @@ import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.TextView;
@@ -36,10 +37,10 @@ public class ScheduleAppointmentActivity extends AppCompatActivity implements Da
     Intent intent;
     DatabaseReference databaseReference;
     FirebaseUser user;
-    List<Appointment> appointments;
+    List <Appointment> appointments;
     String emailPatient, emailDoctor;
     String timeOfAppointment;
-    int num_of_patients_at_same_time=3;
+    public int num_of_patients_at_same_time=3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,7 +98,7 @@ public class ScheduleAppointmentActivity extends AppCompatActivity implements Da
                         appointments.add(appointment);
                     }
                 }
-                if(appointments.size() == 42)
+                if(appointments.size() >= 42)
                 {
                     new SweetAlertDialog(ScheduleAppointmentActivity.this)
                             .setTitleText("Scheduling an appointment!")
@@ -107,11 +108,14 @@ public class ScheduleAppointmentActivity extends AppCompatActivity implements Da
                 }
                 else
                 {
-                    int x=(int)appointments.size()/num_of_patients_at_same_time;
+                    int x=((int)appointments.size())/(int)num_of_patients_at_same_time;
+                    Log.d("debug: ","x: "+x+", app.size:"+appointments.size()+" num: "+num_of_patients_at_same_time);
                     double timeFull = (double)(x*30)/60;
                     int hour = 9 + (int)timeFull;
                     double minutes = timeFull - (int)timeFull;
-                    System.out.println(minutes);
+                    Log.d("debug","timeFull: "+timeFull);
+                    Log.d("debug","hour: "+hour);
+                    Log.d("debug","minutes: "+minutes);
                     if(minutes >= 0.5) {
                         timeOfAppointment = hour+":30";
                     }

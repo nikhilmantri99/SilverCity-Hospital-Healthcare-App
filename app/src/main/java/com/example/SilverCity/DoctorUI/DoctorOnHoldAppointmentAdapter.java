@@ -88,7 +88,7 @@ public class DoctorOnHoldAppointmentAdapter extends BaseAdapter {
                 for(DataSnapshot data : dataSnapshot.getChildren())
                 {
                     Appointment appt = data.getValue(Appointment.class);
-                    if(appt.getDate().equals(appointment.getDate()) && appt.getTime().equals(appointment.getTime())) {
+                    if(appt.getStatus()=="On hold" && appt.getDate().equals(appointment.getDate()) && appt.getTime().equals(appointment.getTime()) && appt.getEmailPatient().equals(appointment.getEmailPatient()) && appt.getEmailDoctor().equals(appointment.getEmailDoctor())) {
                         appointmentId = data.getKey();
                     }
                 }
