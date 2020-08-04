@@ -80,7 +80,7 @@ public class DoctorOnHoldAppointmentAdapter extends BaseAdapter {
         Button declineButton = convertView.findViewById(R.id.declineButton);
 
         final Appointment appointment = appointmentList.get(position);
-        appointmentId = "";
+        appointmentId = null;
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Appointments");
         ref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -103,17 +103,21 @@ public class DoctorOnHoldAppointmentAdapter extends BaseAdapter {
         acceptButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Appointments").child(appointmentId);
-                databaseReference.child("status").setValue("Accepted");
-                notifyDataSetChanged();
+                if(appointmentId!=null){
+                    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Appointments").child(appointmentId);
+                    databaseReference.child("status").setValue("Accepted");
+                    notifyDataSetChanged();
+                }
             }
         });
 
         declineButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ReasonDeclineDialog reasonDeclineDialog = new ReasonDeclineDialog(appointmentId, DoctorOnHoldAppointmentAdapter.this);
-                reasonDeclineDialog.show(((FragmentActivity)mContext).getSupportFragmentManager(), "reason of refusal");
+                if(appointmentId!=null){
+                    ReasonDeclineDialog reasonDeclineDialog = new ReasonDeclineDialog(appointmentId, DoctorOnHoldAppointmentAdapter.this);
+                    reasonDeclineDialog.show(((FragmentActivity)mContext).getSupportFragmentManager(), "reason of refusal");
+                }
             }
         });
         emailPatient = appointment.getEmailDoctor();

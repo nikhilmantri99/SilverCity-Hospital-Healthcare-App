@@ -9,6 +9,7 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -73,7 +74,9 @@ public class DoctorMenuActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot data : dataSnapshot.getChildren())
                 {
+                    Log.d("debug"," Here!!");
                     Appointment appointment = data.getValue(Appointment.class);
+                    Log.d("debug1"," Here I am bro post appointment!!");
                     if(appointment!=null && appointment.getEmailPatient()!=null && FirebaseAuth.getInstance().getCurrentUser().getEmail()!=null){
                     if(appointment.getEmailPatient().equals(FirebaseAuth.getInstance().getCurrentUser().getEmail()) &&
                             appointment.getStatus().equals("Accepted") &&
@@ -82,6 +85,7 @@ public class DoctorMenuActivity extends AppCompatActivity {
                             numberOfAppointments++;}
                     }
                 }
+                Log.d("debug2"," Here I am, past the for loop!!");
                 if (numberOfAppointments == 1) {
                     builder = new NotificationCompat.Builder(DoctorMenuActivity.this)
                             .setSmallIcon(R.drawable.ic_heart_beats)
