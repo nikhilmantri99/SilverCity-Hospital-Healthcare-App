@@ -88,7 +88,7 @@ public class DoctorOnHoldAppointmentAdapter extends BaseAdapter {
                 for(DataSnapshot data : dataSnapshot.getChildren())
                 {
                     Appointment appt = data.getValue(Appointment.class);
-                    if(appt.getStatus()=="On hold" && appt.getDate().equals(appointment.getDate()) && appt.getTime().equals(appointment.getTime()) && appt.getEmailPatient().equals(appointment.getEmailPatient()) && appt.getEmailDoctor().equals(appointment.getEmailDoctor())) {
+                    if(appt.getStatus().equals(appointment.getStatus()) && appt.getDate().equals(appointment.getDate()) && appt.getTime().equals(appointment.getTime()) && appt.getEmailPatient().equals(appointment.getEmailPatient()) && appt.getEmailDoctor().equals(appointment.getEmailDoctor())) {
                         appointmentId = data.getKey();
                     }
                 }
@@ -120,7 +120,7 @@ public class DoctorOnHoldAppointmentAdapter extends BaseAdapter {
                 }
             }
         });
-        emailPatient = appointment.getEmailDoctor();
+        emailPatient = appointment.getEmailPatient();
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Patients");
         reference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -143,15 +143,15 @@ public class DoctorOnHoldAppointmentAdapter extends BaseAdapter {
 
         StorageReference storageReference = FirebaseStorage.getInstance().getReference();
         final StorageReference profileRef = storageReference.child("Profile_pictures").child(emailPatient + ".jpg");
-        profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-            @Override
-            public void onSuccess(Uri uri) {
-                Glide.with(mContext).load(uri).into(patientPicture);
+        if(profileRef!=null){
+            profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                @Override
+                public void onSuccess(Uri uri) {
+                    Glide.with(mContext).load(uri).into(patientPicture);
 
-            }
-        });
+                }
+            });
+        }
         return convertView;
     }
-
-
 }

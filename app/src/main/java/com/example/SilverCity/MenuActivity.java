@@ -1,6 +1,7 @@
 package com.example.SilverCity;
 
 import android.app.Notification;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -17,6 +18,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 
+import com.example.SilverCity.DoctorUI.DoctorMenuActivity;
 import com.example.SilverCity.models.Appointment;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -84,8 +86,20 @@ public class MenuActivity extends AppCompatActivity {
                         }
                     }
                 }
+
+                NotificationManager mNotificationManager =
+                        (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                    NotificationChannel channel = new NotificationChannel("YOUR_CHANNEL_ID",
+                            "YOUR_CHANNEL_NAME",
+                            NotificationManager.IMPORTANCE_DEFAULT);
+                    channel.setDescription("YOUR_NOTIFICATION_CHANNEL_DESCRIPTION");
+                    mNotificationManager.createNotificationChannel(channel);
+                }
+
+
                 if (numberOfAppointments == 1) {
-                    builder = new NotificationCompat.Builder(MenuActivity.this)
+                    builder = new NotificationCompat.Builder(MenuActivity.this,"YOUR_CHANNEL_ID")
                             .setSmallIcon(R.drawable.ic_heart_beats)
                             .setContentTitle("Daily appointments")
                             .setContentText("You have one appointment today")
@@ -95,7 +109,7 @@ public class MenuActivity extends AppCompatActivity {
                             .setPriority(NotificationCompat.PRIORITY_HIGH);
                 }
                 if (numberOfAppointments > 1) {
-                    builder = new NotificationCompat.Builder(MenuActivity.this)
+                    builder = new NotificationCompat.Builder(MenuActivity.this, "YOUR_CHANNEL_ID")
                             .setSmallIcon(R.drawable.ic_heart_beats)
                             .setContentTitle("Daily appointments")
                             .setContentText("You have " + numbers[numberOfAppointments - 1] + " appointments today")
@@ -106,7 +120,7 @@ public class MenuActivity extends AppCompatActivity {
 
                 }
                 if (numberOfAppointments == 0) {
-                    builder = new NotificationCompat.Builder(MenuActivity.this)
+                    builder = new NotificationCompat.Builder(MenuActivity.this, "YOUR_CHANNEL_ID")
                             .setSmallIcon(R.drawable.ic_heart_beats)
                             .setContentTitle("Daily appointments")
                             .setContentText("You have no appointments today")

@@ -76,7 +76,7 @@ public class DoctorAppointmentAdapter extends BaseAdapter {
 
 
         final Appointment appointment = appointmentList.get(position);
-        emailPatient = appointment.getEmailDoctor();
+        emailPatient = appointment.getEmailPatient();
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Patients");
         reference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -101,13 +101,15 @@ public class DoctorAppointmentAdapter extends BaseAdapter {
 
         StorageReference storageReference = FirebaseStorage.getInstance().getReference();
         final StorageReference profileRef = storageReference.child("Profile_pictures").child(emailPatient+".jpg");
-        profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-            @Override
-            public void onSuccess(Uri uri) {
-                Glide.with(mContext).load(uri).into(patientPicture);
+        if(profileRef!=null){
+            profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                @Override
+                public void onSuccess(Uri uri) {
+                    Glide.with(mContext).load(uri).into(patientPicture);
 
-            }
-        });
+                }
+            });
+        }
         return convertView;
     }
 

@@ -1,6 +1,7 @@
 package com.example.SilverCity.DoctorUI;
 
 import android.app.Notification;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -86,8 +87,19 @@ public class DoctorMenuActivity extends AppCompatActivity {
                     }
                 }
                 Log.d("debug2"," Here I am, past the for loop!!");
+
+                NotificationManager mNotificationManager =
+                        (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                    NotificationChannel channel = new NotificationChannel("YOUR_CHANNEL_ID",
+                            "YOUR_CHANNEL_NAME",
+                            NotificationManager.IMPORTANCE_DEFAULT);
+                    channel.setDescription("YOUR_NOTIFICATION_CHANNEL_DESCRIPTION");
+                    mNotificationManager.createNotificationChannel(channel);
+                }
+
                 if (numberOfAppointments == 1) {
-                    builder = new NotificationCompat.Builder(DoctorMenuActivity.this)
+                    builder = new NotificationCompat.Builder(DoctorMenuActivity.this, "YOUR_CHANNEL_ID")
                             .setSmallIcon(R.drawable.ic_heart_beats)
                             .setContentTitle("Daily appointments")
                             .setContentText("You have one appointment today")
@@ -97,7 +109,7 @@ public class DoctorMenuActivity extends AppCompatActivity {
                             .setPriority(NotificationCompat.PRIORITY_HIGH);
                 }
                 if (numberOfAppointments > 1) {
-                    builder = new NotificationCompat.Builder(DoctorMenuActivity.this)
+                    builder = new NotificationCompat.Builder(DoctorMenuActivity.this, "YOUR_CHANNEL_ID")
                             .setSmallIcon(R.drawable.ic_heart_beats)
                             .setContentTitle("Daily appointments")
                             .setContentText("You have " + numbers[numberOfAppointments - 1] + " appointments today")
@@ -108,7 +120,7 @@ public class DoctorMenuActivity extends AppCompatActivity {
 
                 }
                 if (numberOfAppointments == 0) {
-                    builder = new NotificationCompat.Builder(DoctorMenuActivity.this)
+                    builder = new NotificationCompat.Builder(DoctorMenuActivity.this, "YOUR_CHANNEL_ID")
                             .setSmallIcon(R.drawable.ic_heart_beats)
                             .setContentTitle("Daily appointments")
                             .setContentText("You have no appointments today")
