@@ -18,5 +18,5 @@ We have made an app for a hospital named SilverCity to enable people to take app
 ![alt text](https://github.com/nikhilmantri99/SilverCity-Hospital-Healthcare-App/blob/master/App_Views/16.jpg)
 ![alt text](https://github.com/nikhilmantri99/SilverCity-Hospital-Healthcare-App/blob/master/App_Views/17.jpg)
 ![alt text](https://github.com/nikhilmantri99/SilverCity-Hospital-Healthcare-App/blob/master/App_Views/18.jpg)
-![alt text](https://github.com/nikhilmantri99/SilverCity-Hospital-Healthcare-App/blob/master/App_Views/19.jpg)
-![alt text](https://github.com/nikhilmantri99/SilverCity-Hospital-Healthcare-App/blob/master/App_Views/20.jpg)
+![alt text](https://github.com/nikhilmantri99/SilverCity-Hospital-Healthcare-App/blob/master/App_Views/prescription1.jpg)
+![alt text](https://github.com/nikhilmantri99/SilverCity-Hospital-Healthcare-App/blob/master/App_Views/prescription2.jpg)
